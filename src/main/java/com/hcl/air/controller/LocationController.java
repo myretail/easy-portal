@@ -46,14 +46,14 @@ public class LocationController {
 		form.setDestination(goingTo);
 		form.setStartDate(startDate);
 		form.setReturnDate(endDate);
-		
+
 		return locationService.selectFlights(form);
 	}
 
 	@RequestMapping(value = "deals/{code}", method = RequestMethod.GET)
 	public @ResponseBody
 	List<Deal> deals(@PathVariable String code) {
-		
+
 		return locationService.selectDeals(code);
 	}
 }
